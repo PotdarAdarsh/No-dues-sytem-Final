@@ -1,5 +1,6 @@
 package com.example.databaseinandroid_2
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -18,11 +19,14 @@ import kotlin.math.sign
 
 class WelcomeActivity : AppCompatActivity() {
     private lateinit var databaseReference: DatabaseReference
+    private lateinit var databaseReference1: DatabaseReference
+    lateinit var array_dept_name: ArrayList<User_adapter>
 
     companion object {
         const val KEY = "com.example.databaseinandroid_2"
     }
 
+    @SuppressLint("MissingInflatedId", "SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_welcome)
@@ -30,89 +34,65 @@ class WelcomeActivity : AppCompatActivity() {
         //  val Acc_sts:String
         val listView = findViewById<ListView>(R.id.listView)
 
-        databaseReference = FirebaseDatabase.getInstance().getReference("Users_status")
-        databaseReference.child("Accounts").get().addOnSuccessListener {
+        val name = intent.getStringExtra(SignInActivity.KEY2)
+        val mail = intent.getStringExtra(SignInActivity.KEY1)
+        val userId = intent.getStringExtra(SignInActivity.KEY3)
+
+      /**  databaseReference = FirebaseDatabase.getInstance().getReference("Users_status_Accounts")
+        val usernm = databaseReference.child("Ankita").get().addOnSuccessListener {
+            if (it.exists()) {
+                val user_name = it.value
+            }
+
+        }**/
 
 
-            if(it.exists()) {
-                val Acc_sts = it.child("adu").value
+        databaseReference = FirebaseDatabase.getInstance().getReference("Users_status_Accounts")
+        databaseReference.child(userId.toString()).get().addOnSuccessListener {
 
-                val taskList = arrayListOf<String>()
-                taskList.add("ACCOUNTS DEPARTMENT " + Acc_sts.toString())
-                taskList.add("LIBRARY DEPARTMENT")
-                taskList.add("HOSTELDEPARTMENT ")
 
-                val adapterForMyListView = ArrayAdapter(this, android.R.layout.simple_list_item_1, taskList)
-                listView.adapter = adapterForMyListView
+            if (it.exists()) {
+                val Acc_sts = it.value
 
-                listView.setOnItemClickListener { parent, view, position, id ->
+                val Dep_nm = arrayOf("Accounts", "Library", "Hostel", "Exam")
+                val Stud_sts = arrayOf("Department Dues: " + Acc_sts.toString(), "no", "yes", "no")
+                val dept_pic = arrayOf(
+                    R.drawable.accounts,
+                    R.drawable.accounts,
+                    R.drawable.hostel,
+                    R.drawable.exam
+                )
 
-                    val text = "Clicked on item : " + (view as TextView).text.toString()
-                    Toast.makeText(this, text, Toast.LENGTH_SHORT).show()
+                array_dept_name = ArrayList()
 
+                for (eachIndex in Dep_nm.indices) {
+                    val user =
+                        User_adapter(Dep_nm[eachIndex], Stud_sts[eachIndex], dept_pic[eachIndex])
+
+                    array_dept_name.add(user)
                 }
-        }
-       /** val taskList = arrayListOf<String>()
-        taskList.add("ACCOUNTS DEPARTMENT" + Acc_sts.toString())
-        taskList.add("LIBRARY DEPARTMENT")
-        taskList.add("HOSTELDEPARTMENT ")
+                val listView = findViewById<ListView>(R.id.listView)
+                listView.isClickable = true
+                listView.adapter = Stud_Adapter(this, array_dept_name)
 
-        val adapterForMyListView = ArrayAdapter(this, android.R.layout.simple_list_item_1, taskList)
-        listView.adapter = adapterForMyListView
 
-        listView.setOnItemClickListener { parent, view, position, id ->
+            }
 
-            val text = "Clicked on item : " + (view as TextView).text.toString()
-            Toast.makeText(this, text, Toast.LENGTH_SHORT).show()
-
-**/
         }.addOnFailureListener {
             Toast.makeText(this, "Failed, Error in DB", Toast.LENGTH_SHORT).show()
         }
 
+     val Update_btn=findViewById<Button>(R.id.request)
+
+        Update_btn.setOnClickListener {
+            val req=name.toString()
+
+            databaseReference1 = FirebaseDatabase.getInstance().getReference("Users_request")
+
+            databaseReference1.child("Accounts").setValue(req.toString()+" , ").addOnSuccessListener {
+
+                Toast.makeText(this,"Request sent Successfully",Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 }
-
-/*  val name = intent.getStringExtra(SignInActivity.KEY2)
-       val mail = intent.getStringExtra(SignInActivity.KEY1)
-       val userId = intent.getStringExtra(SignInActivity.KEY3)
-
-       val welcomeText = findViewById<TextView>(R.id.tVWelcome)
-       val mailText = findViewById<TextView>(R.id.tvMail)
-       val idText = findViewById<TextView>(R.id.tvUnique)
-
-       welcomeText.text = "Welcome $name"
-       mailText.text = "Mail : $mail"
-       idText.text = "UserId : $userId"
-
-
-       val btnhome=findViewById<Button>(R.id.btnHome)
-
-       btnhome.setOnClickListener {
-           val homeintent = Intent(this, HomeActivity::class.java)
-           homeintent.putExtra(SignInActivity.KEY1, mailText.toString())
-           homeintent.putExtra(SignInActivity.KEY2, name.toString())
-           homeintent.putExtra(SignInActivity.KEY3, userId.toString())
-
-           startActivity(homeintent)
-       }
-       val btnhome2=findViewById<Button>(R.id.btnHome2)
-       btnhome2.setOnClickListener {
-           val homeintent2 = Intent(this, HomeActivity::class.java)
-       //     homeintent2.putExtra(KEY,userId)
-           startActivity(homeintent2)
-       }
-*/
-
-/** val taskList = arrayListOf<String>()
-taskList.add("ACCOUNTS DEPARTMENT")
-taskList.add("LIBRARY DEPARTMENT")
-taskList.add("HOSTELDEPARTMENT ")
-
-val adapterForMyListView = ArrayAdapter(this, android.R.layout.simple_list_item_1, taskList)
-listView.adapter = adapterForMyListView
-
-listView.setOnItemClickListener { parent, view, position, id ->
-
-val text = "Clicked on item : " + (view as TextView).text.toString()
-Toast.makeText(this, text, Toast.LENGTH_SHORT).show()**/

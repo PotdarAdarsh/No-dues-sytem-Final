@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/get_started"
+    android:orientation="vertical"
     tools:context=".Get_started">
 
 
@@ -13,17 +14,105 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="350dp"
         android:backgroundTint="#1180CF"
-        android:text="Student"
-        android:textSize="30dp" />
+        android:text="STUDENT"
+        android:textSize="24dp" />
+    <Button
+        android:id="@+id/super_module"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#1180CF"
+        android:text="SUPER MODULE"
+        android:textSize="25dp" />
+
+  <!--  <Button
+        android:id="@+id/deptACC"
+        android:layout_width="163dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#1180CF"
+        android:text="ACCOUNTS"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/deptHOS"
+        android:layout_width="163dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#1180CF"
+        android:text="HOSTEL"
+        android:textSize="20dp" />
 
     <Button
         android:id="@+id/dept"
+        android:layout_width="163dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="170dp"
+        android:backgroundTint="#1180CF"
+        android:text="ACCOUNTS"
+        android:textSize="20dp" />
+-->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="500dp"
-        android:text="Dept" />
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:id="@+id/btnAccounts"
+            android:layout_width="0dp"
+            android:backgroundTint="#1180CF"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:textSize="15dp"
+            android:text="Accounts Department"/>
+
+        <Button
+            android:id="@+id/btnLibrary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#1180CF"
+            android:textSize="15dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="Library Department"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnHostel"
+            android:layout_width="0dp"
+            android:backgroundTint="#1180CF"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:text="Hostel Department"/>
+
+        <Button
+            android:id="@+id/btnExam"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#1180CF"
+            android:textSize="15dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="Exam Department"/>
+
+    </LinearLayout>
+
+
+
 
 </LinearLayout>

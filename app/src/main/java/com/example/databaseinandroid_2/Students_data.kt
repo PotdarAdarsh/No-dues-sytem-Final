@@ -1,6 +1,6 @@
 package com.example.databaseinandroid_2
 
-data class Students_data(val adu : String, val anku : String, val anju : String){
-
-}
+data class Students_data(var Dep_name:String,
+                         var Dept_status: String,
+                         var Dept_pic:Int)
 
