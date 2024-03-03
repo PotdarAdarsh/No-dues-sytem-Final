@@ -24,21 +24,21 @@ class Get_started : AppCompatActivity() {
         }
         dept_btn.setOnClickListener {
 
-            val dept_intent = Intent(this, Dept::class.java)
+            val dept_intent = Intent(this, Log_in_Acc::class.java)
             startActivity(dept_intent)
         }
         dept_btn_lib.setOnClickListener {
 
-            val lib_intent=Intent(this,Dept_lib::class.java)
+            val lib_intent=Intent(this,Log_in_Lib::class.java)
             startActivity(lib_intent)
         }
 
         dept_btn_hos.setOnClickListener {
-            val hos_intent=Intent(this,Dept_hostel::class.java)
+            val hos_intent=Intent(this,Log_in_Hostel::class.java)
             startActivity(hos_intent)
         }
         dept_btn_exm.setOnClickListener {
-            val exm_intent=Intent(this,Dept_exam::class.java)
+            val exm_intent=Intent(this,Log_in_Exam::class.java)
             startActivity(exm_intent)
         }
 
