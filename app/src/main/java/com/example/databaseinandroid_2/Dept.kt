@@ -12,6 +12,10 @@ import com.google.firebase.database.FirebaseDatabase
 
 class Dept : AppCompatActivity() {
     lateinit var database: DatabaseReference
+    lateinit var database_adarsh: DatabaseReference
+    lateinit var database_ankita: DatabaseReference
+    lateinit var database_ankali: DatabaseReference
+
     lateinit var databaseReference: DatabaseReference
     lateinit var databaseReference_del: DatabaseReference
 
@@ -32,7 +36,16 @@ class Dept : AppCompatActivity() {
         val request = findViewById<TextView>(R.id.req)
         val Update = findViewById<Button>(R.id.update_btn)
 
-        databaseReference = FirebaseDatabase.getInstance().getReference("Users_request")
+
+        databaseReference_del = FirebaseDatabase.getInstance().getReference("Users_request_Accounts")
+        databaseReference_del.get().addOnSuccessListener {
+            if(it.exists()){
+
+                val Acc_req=it.value.toString()
+                request.text=Acc_req
+            }
+        }
+      /**  databaseReference = FirebaseDatabase.getInstance().getReference("Users_request")
         databaseReference.child("Accounts").get().addOnSuccessListener {
 
             if (it.exists()) {
@@ -44,29 +57,32 @@ class Dept : AppCompatActivity() {
                 request.text="Empty"
             }
         }
-
+**/
         Update.setOnClickListener {
-            val Dep_name = "Accounts"
-            val Anku_sts = Ankita_sts.text.toString()
-            val Adu_sts = Adarsh_sts.text.toString()
-            val Anju_sts = Anjali_sts.text.toString()
+            val ankita_acc = Ankita_sts.text.toString()
+         val Anku_sts_acc = Ankita_sts.text.toString()
+            val Adu_sts_acc = Adarsh_sts.text.toString()
+            val Anju_sts_acc = Anjali_sts.text.toString()
 
 
-            //val Status = Students_data(Anku_sts, Adu_sts, Anju_sts)
-            database = FirebaseDatabase.getInstance().getReference("Users_status_Accounts")
+            val Status = Students_data(Anku_sts_acc, Adu_sts_acc, Anju_sts_acc)
+            database_adarsh = FirebaseDatabase.getInstance().getReference("Users_status")
+            database_adarsh.child("Accounts_adarsh").setValue(Adu_sts_acc)
 
-            database.child("Ankita").setValue(Anku_sts)
-            database.child("adu123").setValue(Adu_sts)
-            database.child("Anjali").setValue(Anju_sts)
-            // database.child(Dep_name).setValue(Anku_sts)
+            database_ankita = FirebaseDatabase.getInstance().getReference("Users_status")
+            database_ankita.child("Accounts_Ankita Mane").setValue(ankita_acc)
+
+            database_ankali = FirebaseDatabase.getInstance().getReference("Users_status")
+            database_ankali.child("Accounts_Anjali Potdar").setValue(Anju_sts_acc)
+
             request.text="Empty"
             Toast.makeText(this,"updated",Toast.LENGTH_SHORT).show()
 
-           /** databaseReference_del=FirebaseDatabase.getInstance().getReference("Users_request")
-            val nodeToDelete = databaseReference_del.child("Accounts")
+            databaseReference_del=FirebaseDatabase.getInstance().getReference("Users_request_Accounts")
+            val nodeToDelete = databaseReference_del
             // Use removeValue() method to delete data at that node
             nodeToDelete.removeValue()
-**/
+
         }
 
 

@@ -14,6 +14,9 @@ class Get_started : AppCompatActivity() {
 
         val stud_btn=findViewById<Button>(R.id.button)
         val dept_btn=findViewById<Button>(R.id.btnAccounts)
+        val dept_btn_lib=findViewById<Button>(R.id.btnLibrary)
+        val dept_btn_hos=findViewById<Button>(R.id.btnHostel)
+        val dept_btn_exm=findViewById<Button>(R.id.btnExam)
         stud_btn.setOnClickListener {
 
             val intentsignup = Intent(this, MainActivity::class.java)
@@ -24,5 +27,20 @@ class Get_started : AppCompatActivity() {
             val dept_intent = Intent(this, Dept::class.java)
             startActivity(dept_intent)
         }
+        dept_btn_lib.setOnClickListener {
+
+            val lib_intent=Intent(this,Dept_lib::class.java)
+            startActivity(lib_intent)
+        }
+
+        dept_btn_hos.setOnClickListener {
+            val hos_intent=Intent(this,Dept_hostel::class.java)
+            startActivity(hos_intent)
+        }
+        dept_btn_exm.setOnClickListener {
+            val exm_intent=Intent(this,Dept_exam::class.java)
+            startActivity(exm_intent)
+        }
+
     }
 }
