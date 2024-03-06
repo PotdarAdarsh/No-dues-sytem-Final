@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    android:background="@drawable/dept"
+    android:background="@drawable/all_pakka"
     tools:context=".Dept">
 
     <TextView
@@ -42,6 +42,29 @@
                 android:layout_marginBottom="10dp"
                 android:textSize="20dp"
                 android:text="Ankita's Department Status:" />
+        <!--    <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/ankita_sts_clread"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#0E80D0"
+                    android:text="clread" />
+
+                <Button
+                    android:id="@+id/ankita_sts_not_clread"
+                    android:layout_width="0dp"
+                    android:backgroundTint="#0E80D0"
+                    android:layout_margin="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="not clread" />
+            </LinearLayout>-->
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
@@ -62,6 +85,29 @@
                 android:layout_marginBottom="10dp"
                 android:textSize="20dp"
                 android:text="Adarsh's Department Status:" />
+        <!--    <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/adarsh_sts_clread"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#0E80D0"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:text="clread" />
+
+                <Button
+                    android:id="@+id/adarsh_sts_not_clread"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#0E80D0"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:text="not clread" />
+            </LinearLayout>-->
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
@@ -82,6 +128,30 @@
                 android:layout_marginBottom="10dp"
                 android:textSize="20dp"
                 android:text="Anjali's Department Status:" />
+         <!--   <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/anjali_sts_clread"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#0E80D0"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:text="clread" />
+
+                <Button
+                    android:id="@+id/anjali_sts_not_clread"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#0E80D0"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:text="not clread" />
+            </LinearLayout>-->
+
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
