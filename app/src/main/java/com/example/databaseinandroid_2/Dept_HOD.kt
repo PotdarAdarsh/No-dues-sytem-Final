@@ -50,37 +50,49 @@ class Dept_HOD : AppCompatActivity() {
 
 
             //ANKITA
+        //Ankita_sts_grn.setBackgroundColor(#0E80D0)
         Ankita_sts_red.setOnClickListener {
             database_ankita = FirebaseDatabase.getInstance().getReference("Users_status")
             database_ankita.child("HOD_Ankita Mane").setValue("Dues are not clread")
             Ankita_sts_red.setBackgroundColor(Color.RED)
+            Ankita_sts_grn.setBackgroundColor(Color.parseColor("#0E80D0"))
+
         }
         Ankita_sts_grn.setOnClickListener {
             database_ankita = FirebaseDatabase.getInstance().getReference("Users_status")
             database_ankita.child("HOD_Ankita Mane").setValue("Dues are  clread")
             Ankita_sts_grn.setBackgroundColor(Color.GREEN)
+            Ankita_sts_red.setBackgroundColor(Color.parseColor("#0E80D0"))
+
         }
         //ADARSH
         Adarsh_sts_red.setOnClickListener {
             database_adarsh = FirebaseDatabase.getInstance().getReference("Users_status")
             database_adarsh.child("HOD_adarsh").setValue("Dues are not clread")
             Adarsh_sts_red.setBackgroundColor(Color.RED)
+            Adarsh_sts_grn.setBackgroundColor(Color.parseColor("#0E80D0"))
+
         }
         Adarsh_sts_grn.setOnClickListener {
             database_adarsh = FirebaseDatabase.getInstance().getReference("Users_status")
             database_adarsh.child("HOD_adarsh").setValue("Dues are  clread")
             Adarsh_sts_grn.setBackgroundColor(Color.GREEN)
+            Adarsh_sts_red.setBackgroundColor(Color.parseColor("#0E80D0"))
+
         }
         //ANJALI
         Anjali_sts_red.setOnClickListener {
             database_ankali = FirebaseDatabase.getInstance().getReference("Users_status")
             database_ankali.child("HOD_Anjali Potdar").setValue("Dues are not clread")
             Anjali_sts_red.setBackgroundColor(Color.RED)
+            Anjali_sts_grn.setBackgroundColor(Color.parseColor("#0E80D0"))
+
         }
         Anjali_sts_grn.setOnClickListener {
             database_ankali = FirebaseDatabase.getInstance().getReference("Users_status")
             database_ankali.child("HOD_Anjali Potdar").setValue("Dues are  clread")
             Anjali_sts_grn.setBackgroundColor(Color.GREEN)
+            Anjali_sts_red.setBackgroundColor(Color.parseColor("#0E80D0"))
         }
 
 

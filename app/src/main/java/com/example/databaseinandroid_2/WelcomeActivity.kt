@@ -80,11 +80,11 @@ class WelcomeActivity : AppCompatActivity() {
                     "Department Dues:"+exm_sts.toString()
                 )
                 val dept_pic = arrayOf(
-                    R.drawable.exam,
-                    R.drawable.accounts,
-                    R.drawable.accounts,
-                    R.drawable.hostel,
-                    R.drawable.exam
+                    R.drawable.hodfinal,
+                    R.drawable.accfinal,
+                    R.drawable.libraryfinal,
+                    R.drawable.hostel_new,
+                    R.drawable.exam_dept_new
                 )
 
 
