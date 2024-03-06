@@ -1,5 +1,6 @@
 package com.example.databaseinandroid_2
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -23,12 +24,14 @@ class SignInActivity : AppCompatActivity() {
         const val KEY3 = "com.example.day16database.SignInActivity.id"
     }
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in)
 
         val signInButton = findViewById<Button>(R.id.btnSignIn)
         val userName = findViewById<TextInputEditText>(R.id.userNameEditText)
+        val signUP=findViewById<TextView>(R.id.tvSIGNUP)
 
         signInButton.setOnClickListener {
 
@@ -38,6 +41,11 @@ class SignInActivity : AppCompatActivity() {
             } else{
                 Toast.makeText(this, "Please enter user id", Toast.LENGTH_SHORT).show()
             }
+        }
+        signUP.setOnClickListener {
+
+            val intSignUp=Intent(this,MainActivity::class.java)
+            startActivity(intSignUp)
         }
     } // onCreate Method over
 
@@ -53,7 +61,7 @@ class SignInActivity : AppCompatActivity() {
                 val name = it.child("name").value
                 val userId = it.child("uniqueId").value
 
-                val intentWelcome = Intent(this, WelcomeActivity::class.java)
+                val intentWelcome = Intent(this, Unlock_form::class.java)
                 intentWelcome.putExtra(KEY1, email.toString())
                 intentWelcome.putExtra(KEY2, name.toString())
                 intentWelcome.putExtra(KEY3, userId.toString())
@@ -65,5 +73,7 @@ class SignInActivity : AppCompatActivity() {
         }.addOnFailureListener {
             Toast.makeText(this, "Failed, Error in DB", Toast.LENGTH_SHORT).show()
         }
+
+
     }
 }

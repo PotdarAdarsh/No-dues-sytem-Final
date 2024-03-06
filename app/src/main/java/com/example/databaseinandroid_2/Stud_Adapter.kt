@@ -20,7 +20,7 @@ class Stud_Adapter (private val context : WelcomeActivity, private val arrayList
         val view = inflater.inflate(R.layout.eachitem, null)
 
         val dep_img=view.findViewById<CircleImageView>(R.id.profile_image)
-       val Dep_name=view.findViewById<TextView>(R.id.tVName)
+        val Dep_name=view.findViewById<TextView>(R.id.tVName)
         val Dep_status=view.findViewById<TextView>(R.id.tVLastMessage)
 
 

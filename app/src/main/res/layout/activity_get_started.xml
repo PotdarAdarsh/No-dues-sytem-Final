@@ -9,59 +9,70 @@
     tools:context=".Get_started">
 
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="350dp"
-        android:backgroundTint="#1180CF"
-        android:text="STUDENT"
-        android:textSize="24dp" />
+
     <Button
         android:id="@+id/super_module"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginLeft="0dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="370dp"
         android:backgroundTint="#1180CF"
         android:text="SUPER MODULE"
         android:textSize="25dp" />
-
-  <!--  <Button
-        android:id="@+id/deptACC"
-        android:layout_width="163dp"
+    <!--
+    <Button
+        android:id="@+id/button"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="0dp"
         android:layout_marginTop="10dp"
         android:backgroundTint="#1180CF"
-        android:text="ACCOUNTS"
-        android:textSize="20dp" />
+        android:text="STUDENT"
+        android:textSize="24dp" />
 
-    <Button
-        android:id="@+id/deptHOS"
-        android:layout_width="163dp"
+        -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="#1180CF"
-        android:text="HOSTEL"
-        android:textSize="20dp" />
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/dept"
-        android:layout_width="163dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="170dp"
-        android:backgroundTint="#1180CF"
-        android:text="ACCOUNTS"
-        android:textSize="20dp" />
--->
+        <Button
+            android:id="@+id/button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_margin="5dp"
+            android:backgroundTint="#1180CF"
+            android:text="STUDENT"
+            android:textSize="14dp" />
+
+        <Button
+            android:id="@+id/hod_module"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_marginLeft="0dp"
+            android:layout_margin="5dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#1180CF"
+            android:text="HOD MODULE"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="10dp">
+        >
 
         <Button
             android:id="@+id/btnAccounts"

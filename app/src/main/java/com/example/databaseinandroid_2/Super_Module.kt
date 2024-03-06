@@ -1,11 +1,13 @@
 package com.example.databaseinandroid_2
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.content.Intent
 
 class Super_Module : AppCompatActivity() {
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_super_module)
@@ -15,6 +17,7 @@ class Super_Module : AppCompatActivity() {
         val Library=findViewById<Button>(R.id.supLibrary)
         val Hostel=findViewById<Button>(R.id.supHostel)
         val Exam=findViewById<Button>(R.id.supExam)
+        val HOD=findViewById<Button>(R.id.sup_hod)
 
         Student.setOnClickListener {
             val Stud_intent=Intent(this,super_Students::class.java)
@@ -35,6 +38,10 @@ class Super_Module : AppCompatActivity() {
         Exam.setOnClickListener {
             val Exm_intent=Intent(this,Dept_exam::class.java)
             startActivity(Exm_intent)
+        }
+        HOD.setOnClickListener {
+            val HOD_intent=Intent(this,Dept_HOD::class.java)
+            startActivity(HOD_intent)
         }
     }
 }

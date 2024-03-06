@@ -24,6 +24,7 @@ class WelcomeActivity : AppCompatActivity() {
     private lateinit var databaseReference_req_lib: DatabaseReference
     private lateinit var databaseReference_req_hos: DatabaseReference
     private lateinit var databaseReference_req_exm: DatabaseReference
+    private lateinit var databaseReference_req_hod: DatabaseReference
 
     // private lateinit var Acc_sts: String
    // private lateinit var Lib_sts: String
@@ -41,9 +42,9 @@ class WelcomeActivity : AppCompatActivity() {
         //  val Acc_sts:String
         val listView = findViewById<ListView>(R.id.listView)
 
-        val name = intent.getStringExtra(SignInActivity.KEY2)
-        val mail = intent.getStringExtra(SignInActivity.KEY1)
-        val userId = intent.getStringExtra(SignInActivity.KEY3)
+        val name = intent.getStringExtra(Unlock_form.KEY2)
+        val mail = intent.getStringExtra(Unlock_form.KEY1)
+        val userId = intent.getStringExtra(Unlock_form.KEY3)
 
         var ac_st: Any? = null
 
@@ -63,19 +64,23 @@ class WelcomeActivity : AppCompatActivity() {
         databaseReference_acc.get().addOnSuccessListener { it ->
 
             if (it.exists()) {
+                val Hod_sts=it.child("HOD_"+name).value.toString()
                 val Acc_sts = it.child("Accounts_"+name).value.toString()
                 val Lib_sts=it.child("Library_"+name).value.toString()
                 val hos_sts=it.child("Hostel_"+name).value.toString()
                 val exm_sts=it.child("Exam_"+name).value.toString()
 
-                val Dep_nm = arrayOf("Accounts", "Library", "Hostel", "Exam")
+                val Dep_nm = arrayOf("HOD","Accounts", "Library", "Hostel", "Exam")
+
                 val Stud_sts = arrayOf(
+                    "Department Dues:"+Hod_sts.toString(),
                     "Department Dues: " + Acc_sts.toString(),
                     "Department Dues:" +Lib_sts.toString(),
                     "Department Dues:"+hos_sts.toString(),
                     "Department Dues:"+exm_sts.toString()
                 )
                 val dept_pic = arrayOf(
+                    R.drawable.exam,
                     R.drawable.accounts,
                     R.drawable.accounts,
                     R.drawable.hostel,

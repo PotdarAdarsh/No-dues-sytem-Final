@@ -4,12 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@drawable/all_pakka"
-    tools:context=".SignInActivity"
->
-
-
+    android:orientation="vertical"
+    tools:context=".Log_in_HOD">
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="300dp"
@@ -22,10 +19,10 @@
         >
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/userNameEditText"
+            android:id="@+id/hod_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter Unique ID"
+            android:hint="Enter Dept ID"
             android:textStyle="normal"
             android:textColor="@color/black"
             app:hintTextColor="@color/blue" />
@@ -35,22 +32,13 @@
 
 
     <Button
-        android:id="@+id/btnSignIn"
+        android:id="@+id/btnSignIn_hod"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:backgroundTint="#0E80D0"
         android:layout_gravity="center"
         android:text="SIGN IN" />
-    <TextView
-        android:id="@+id/tvSIGNUP"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:layout_marginTop="100dp"
-        android:textColor="@color/black"
-        android:text="If you are new user , click :SIGN UP" />
 
 
 
