@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn = "navigation_view">
+
+    <group
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_Admission_information"
+            android:icon="@drawable/admission_info"
+            android:title="Admission Information">
+
+        </item>
+
+        <item
+            android:id="@+id/nav_suggesition_box"
+            android:icon="@drawable/suggestion_box"
+            android:title="Suggestion Box">
+
+        </item>
+
+        <item
+            android:id="@+id/nav_about_us"
+            android:icon="@drawable/about_us"
+            android:title="About Us">
+
+        </item>
+    </group>
+
+
+</menu>

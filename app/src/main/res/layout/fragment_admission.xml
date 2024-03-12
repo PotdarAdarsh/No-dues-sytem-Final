@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".admissionFragment">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="admission fragement"
+        android:textSize="1dp"/>
+
+    <androidx.constraintlayout.utils.widget.ImageFilterButton
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/admission_final_bc"/>
+
+</FrameLayout>

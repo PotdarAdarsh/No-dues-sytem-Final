@@ -55,7 +55,7 @@
                     android:layout_margin="10dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="clread" />
+                    android:text="cleared" />
 
                 <Button
                     android:id="@+id/ankita_sts_not_clread"
@@ -64,7 +64,7 @@
                     android:layout_margin="10dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="not clread" />
+                    android:text="not cleared" />
             </LinearLayout>
 
             <TextView
@@ -87,7 +87,7 @@
                     android:backgroundTint="#0E80D0"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
-                    android:text="clread" />
+                    android:text="cleared" />
 
                 <Button
                     android:id="@+id/adarsh_sts_not_clread"
@@ -96,7 +96,7 @@
                     android:backgroundTint="#0E80D0"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
-                    android:text="not clread" />
+                    android:text="not cleared" />
             </LinearLayout>
 
             <TextView
@@ -119,7 +119,7 @@
                     android:backgroundTint="#0E80D0"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
-                    android:text="clread" />
+                    android:text="cleared" />
 
                 <Button
                     android:id="@+id/anjali_sts_not_clread"
@@ -128,7 +128,7 @@
                     android:backgroundTint="#0E80D0"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
-                    android:text="not clread" />
+                    android:text="not cleared" />
             </LinearLayout>
 
             <Button

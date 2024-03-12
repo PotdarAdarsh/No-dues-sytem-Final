@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Database in android_2</string>
+    <string name="open_nav">open nevigation drawer</string>
+    <string name="close_nav">close nevigation drawer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
