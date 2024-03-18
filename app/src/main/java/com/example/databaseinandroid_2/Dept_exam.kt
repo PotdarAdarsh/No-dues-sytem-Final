@@ -4,6 +4,7 @@ package com.example.databaseinandroid_2
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.annotation.SuppressLint
+import android.content.Intent
 //import androidx.appcompat.app.AppCompatActivity
 //import android.os.Bundle
 import android.widget.Button
@@ -81,7 +82,12 @@ class Dept_exam : AppCompatActivity() {
             nodeToDelete.removeValue()
 
         }
+        val Suggestion=findViewById<Button>(R.id.suggestion_view)
+        Suggestion.setOnClickListener {
 
+            val intent_sug= Intent(this,DeptSuggestionActivity::class.java)
+            startActivity(intent_sug)
+        }
 
 
 

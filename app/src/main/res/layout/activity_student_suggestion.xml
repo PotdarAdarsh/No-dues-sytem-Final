@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/get_started"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/suggestionEditText"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="350dp"
+        android:textColor="#1280CE"
+        android:hint="Enter your suggestion"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#1280CE"
+        android:text="Submit"/>
+
+</LinearLayout>

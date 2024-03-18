@@ -24,6 +24,7 @@ import androidx.fragment.app.FragmentTransaction
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import java.util.jar.Attributes.Name
 import kotlin.math.sign
 
 
@@ -175,6 +176,53 @@ class WelcomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSele
                     val intent = Intent(this, Admission_info::class.java)
                     startActivity(intent)
 
+
+                    // Example: Replace a fragment
+                    // val fragment = YourFragment()
+                    // supportFragmentManager.beginTransaction().replace(R.id.fragment_container, fragment).commit()
+
+                    // Close the navigation drawer if needed
+                    drawerLayout.closeDrawers()
+
+                    true // Return true to indicate that the click event has been handled
+                }
+                R.id.nav_suggesition_box -> {
+                    // Perform action when Admission Information item is clicked
+                    // For example, open a new activity or fragment
+                    // Replace the commented code below with your desired action
+
+                    // Example: Open a new activity
+                    val intent2 = Intent(this, Student_suggestion::class.java)
+                    intent2.putExtra("name",name)
+                    startActivity(intent2)
+
+                    // Example: Replace a fragment
+                    // val fragment = YourFragment()
+                    // supportFragmentManager.beginTransaction().replace(R.id.fragment_container, fragment).commit()
+
+                    // Close the navigation drawer if needed
+                    drawerLayout.closeDrawers()
+
+                    true // Return true to indicate that the click event has been handled
+                }
+
+                // Add cases for other menu items if needed
+                else -> false // Return false for items that are not handled
+            }
+        }
+
+       /**val navigationView2 = findViewById<NavigationView>(R.id.nav_suggesition_box)
+        navigationView2.setNavigationItemSelectedListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.nav_suggesition_box -> {
+                    // Perform action when Admission Information item is clicked
+                    // For example, open a new activity or fragment
+                    // Replace the commented code below with your desired action
+
+                    // Example: Open a new activity
+                    val intent2 = Intent(this, StudentSuggestionActivity::class.java)
+                    startActivity(intent2)
+
                     // Example: Replace a fragment
                     // val fragment = YourFragment()
                     // supportFragmentManager.beginTransaction().replace(R.id.fragment_container, fragment).commit()
@@ -187,7 +235,8 @@ class WelcomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSele
                 // Add cases for other menu items if needed
                 else -> false // Return false for items that are not handled
             }
-        }
+        }**/
+
 
     }
 

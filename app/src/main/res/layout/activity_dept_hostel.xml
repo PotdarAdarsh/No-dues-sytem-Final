@@ -103,6 +103,14 @@
                 android:layout_margin="20dp"
                 android:backgroundTint="#0E80D0"
                 android:text="UPDATE" />
+            <Button
+                android:id="@+id/suggestion_view"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:backgroundTint="#0E80D0"
+                android:text="VIEW SUGGESTIONS" />
 
         </LinearLayout>
 

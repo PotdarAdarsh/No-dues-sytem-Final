@@ -7,6 +7,8 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import android.content.Intent
+
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -36,6 +38,7 @@ class Dept : AppCompatActivity() {
         val Anjali_sts = findViewById<TextInputEditText>(R.id.anjali_sts)
         val request = findViewById<TextView>(R.id.req)
         val Update = findViewById<Button>(R.id.update_btn)
+
 
       /**  val ankita_acc = Ankita_sts.text.toString()
         val Adu_sts_acc = Adarsh_sts.text.toString()
@@ -130,8 +133,12 @@ class Dept : AppCompatActivity() {
 
         }
 
+        val Suggestion=findViewById<Button>(R.id.suggestion_view)
+Suggestion.setOnClickListener {
 
-
+    val intent_sug=Intent(this,DeptSuggestionActivity::class.java)
+    startActivity(intent_sug)
+}
 
     }
 }
